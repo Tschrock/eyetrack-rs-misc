@@ -9,4 +9,4 @@ opencv = "0.82.0"
 rand = "0.8.5"
 thiserror = "1.0.40"
 
-pye3d = { path = "../pye3d-rs" }
+eye3d = { path = "../../etvr-pye3d" }

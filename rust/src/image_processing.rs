@@ -5,6 +5,7 @@
 use opencv::core::{Mat, Point, Point2f, Rect, Scalar, Size, Vector};
 use opencv::prelude::*;
 
+#[allow(dead_code)]
 pub fn crop_rotate(
     image: &Mat,
     x: i32,
@@ -39,6 +40,7 @@ pub fn greyscale(image: &Mat) -> Result<Mat, opencv::Error> {
     Ok(grey)
 }
 
+#[allow(dead_code)]
 pub fn circular_mask(image: &Mat, cx: i32, cy: i32, radius: i32) -> Result<Mat, opencv::Error> {
     let size = image.size()?;
     let mut mask = Mat::new_size_with_default(size, opencv::core::CV_8UC1, Scalar::all(0.0))?;
