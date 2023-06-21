@@ -65,7 +65,7 @@ pub fn fit_rotated_ellipse(
 ) -> Result<(f64, f64, f64, f64, f64), RansacError> {
     let (a, b, c, d, e, f) = rotated_ellipse_data(data)?;
 
-    let theta = 0.5 * (b / (a - c).atan());
+    let theta = 0.5 * (b / (a - c)).atan();
 
     let cx = (2.0 * c * d - b * e) / (b.powi(2) - 4.0 * a * c);
     let cy = (2.0 * a * e - b * d) / (b.powi(2) - 4.0 * a * c);
